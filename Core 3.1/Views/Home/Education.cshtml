@@ -1,0 +1,90 @@
+﻿@model DevInterview._1.Context.EducationModel
+
+@{
+    ViewData["Title"] = "Education";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>HouseHoldMembers</h1>
+
+<section class="content container-fluid">
+    <div class="panel panel-default" style="margin-top:10px;">
+        <div class="row">
+            <div class="col-md-12 col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="panel-body">
+                            <form method="post" asp-controller="Home" asp-action="InsertEducation">
+
+                                <div class="col-md-4">
+
+                                    <div class="form-group">
+                                        <label>Member National Id</label>
+                                        <input class="form-control" type="text" asp-for="applicant_nationalidno" />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Can you Read any Language ?</label>
+                                        <select asp-for="read_any_lang">
+                                            <option id="1">Yes</option>
+                                            <option id="2">No</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Can you write any Language ?</label>
+                                        <select asp-for="write_any_lang">
+                                            <option id="1">Yes</option>
+                                            <option id="2">No</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Currently attending school ?</label>
+                                        <select asp-for="currently_at_school">
+                                            <option id="1">Yes</option>
+                                            <option id="2">No</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Level of education?</label>
+                                        <select asp-for="currently_at_school">
+                                            <option id="1">N/A</option>
+                                            <option id="2">preschool, lower </option>
+                                            <option id="3">primary, upper </option>
+                                            <option id="4">primary </option>
+                                            <option id="5">secondary </option>
+                                            <option id="6">post secondary </option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        <button class="form-control btn btn-primary" type="submit" style="width:120px">Submit Details</button>
+
+                                    </div>
+
+                                </div>                              
+
+                                <div class="col-md-4">
+
+                                </div>
+
+                                <div class="col-md-4">
+
+                                </div>
+
+                            </form>
+
+                            <div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

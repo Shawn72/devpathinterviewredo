@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "FeedBack";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (ViewBag.Success != null && ViewBag.Success)
+{
+    <h2 class="alert alert-success"> Inserted Success</h2>
+    <br />
+    <a class="" asp-area="" asp-controller="Home" asp-action="Index"> Back </a> }
+else
+{ <h2 class="alert alert-danger" > An Error Occured!</h2>
+    <br />
+    <a class="" asp-area="" asp-controller="Home" asp-action="Index"> Back </a>
+ }

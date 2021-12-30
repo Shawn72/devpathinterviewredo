@@ -1,0 +1,86 @@
+﻿@model DevInterview._1.Context.HouseHoldModel
+
+@{
+    ViewData["Title"] = "HouseHoldMembers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>HouseHoldMembers</h1>
+
+<section class="content container-fluid">
+    <div class="panel panel-default" style="margin-top:10px;">
+        <div class="row">
+            <div class="col-md-12 col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="panel-body">
+                            <form method="post" asp-controller="Home" asp-action="InsertHouseHoldDetails">
+
+                                <div class="col-md-4">
+
+                                    <div class="form-group">
+                                        <label>Fullname</label>
+                                        <input class="form-control" type="text" asp-for="fullname" />
+                                    </div>                                  
+
+                                    <div class="form-group">
+                                        <label>Sex</label>
+                                        <select id="sex" asp-for="sex">
+                                            <option id="1">Male</option>
+                                            <option id="2">Female</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Date of Birth</label>
+                                        <input class="form-control" type="date" asp-for="date_of_birth" />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+
+                                    <div class="form-group">
+                                        <label>National ID Number</label>
+                                        <input class="form-control" type="text" asp-for="national_idno" />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Relationship</label>
+                                        <select class="form-control countyDropdown" asp-for="relationship">
+                                            <option value="0"> --- select relationship ---</option>
+                                            <option value="1"> Head</option>
+                                            <option value="2"> Spouse</option>
+                                            <option value="3"> Son/Daughter</option>
+                                            <option value="4"> GrandChild</option>
+                                            <option value="5"> Brother/Sister</option>
+                                            <option value="6"> Father/Mother</option>
+                                            <option value="7"> Nephew/niece</option>
+                                            <option value="8"> In-law</option>
+                                            <option value="9"> Grandparent</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                       
+                                        <button class="form-control btn btn-primary" type="submit">Submit Details</button>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-4">
+
+                                </div>
+
+                              
+                            </form>
+
+                            <div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
